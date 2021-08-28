@@ -1,50 +1,50 @@
 {
-  "name": "launcher-battle",
-  "tree": {
-    "$className": "DataModel",
+	"name": "launcher-battle",
+	"tree": {
+		"$className": "DataModel",
 
-    "ReplicatedStorage": {
-      "Common": {
-        "$path": "src/shared"
-      }
-    },
+		"ReplicatedStorage": {
+			"Common": {
+				"$path": "src/shared"
+			}
+		},
 
-    "ServerScriptService": {
-      "Server": {
-        "$path": "src/server"
-      }
-    },
+		"ServerScriptService": {
+			"Server": {
+				"$path": "src/server"
+			}
+		},
 
-    "StarterPlayer": {
-      "StarterPlayerScripts": {
-        "Client": {
-          "$path": "src/client"
-        }
-      }
-    },
+		"StarterPlayer": {
+			"StarterPlayerScripts": {
+				"Client": {
+					"$path": "src/client"
+				}
+			}
+		},
 
-    "Workspace": {
-      "$properties": {
-        "FilteringEnabled": true
-      }
-    },
-    "Lighting": {
-      "$properties": {
-        "Ambient": [
-          0,
-          0,
-          0
-        ],
-        "Brightness": 2,
-        "GlobalShadows": true,
-        "Outlines": false,
-        "Technology": "Voxel"
-      }
-    },
-    "SoundService": {
-      "$properties": {
-        "RespectFilteringEnabled": true
-      }
-    }
-  }
+		"Workspace": {
+			"$className": "Workspace",
+			"$ignoreUnknownInstances": true,
+			"$path": "models",
+			"$properties": {
+				"FilteringEnabled": true
+			}
+		},
+		"Lighting": {
+			"$properties": {
+				"Ambient": [0,0,0],
+				"OutdoorAmbient": [0.5,0.5,0.5],
+				"Brightness": 3,
+				"GlobalShadows": true,
+				"Outlines": false,
+				"Technology": "Voxel"
+			}
+		},
+		"SoundService": {
+			"$properties": {
+				"RespectFilteringEnabled": true
+			}
+		}
+	}
 }
