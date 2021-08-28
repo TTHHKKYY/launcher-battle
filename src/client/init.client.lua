@@ -17,12 +17,14 @@ local Timer = Clock.new()
 Mouse.Button1Down:Connect(function()
 	if Timer:Check(1) then
 		Timer:Start()
+		Sound.Play(1)
 		Remotes.Push:FireServer(Mouse.UnitRay)
 	end
 end)
 
 Remotes.Attacked.OnClientEvent:Connect(function()
 	Shaker:Shake(2)
+	print("attacked!")
 	
 	for i=1,200 do
 		Shaker:Update(task.wait())
